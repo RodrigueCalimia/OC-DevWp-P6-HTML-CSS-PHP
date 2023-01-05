@@ -7,23 +7,14 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="wrapper" class="hfeed">
+<div id="wrapper" class="container">
 <header id="header" role="banner">
-<div id="branding">
-<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-<?php
-if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; }
-echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
-if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; }
-?>
-</div>
-<div id="site-description"<?php if ( !is_single() ) { echo ' itemprop="description"'; } ?>><?php bloginfo( 'description' ); ?></div>
-</div>
+
 <nav id="navigation" class="barre_logo_menu">
 <?php if(has_custom_logo()) : ?>
-<?php the_custom_logo(); ?>
+    <a class="logo-brand" href="<?php bloginfo('url'); ?>"><?php the_custom_logo(); ?></a>
 <?php else : ?>
-<h1><a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+<h1><a class="site-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 <?php endif; ?>
 <?php
 wp_nav_menu(

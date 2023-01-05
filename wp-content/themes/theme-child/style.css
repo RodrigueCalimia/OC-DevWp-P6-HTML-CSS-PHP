@@ -1,29 +1,63 @@
 /*
-Theme Name: Astra-Child
+Theme Name: Thème enfant
 Description: Theme enfant de Rodrigue CALIMA
 Author: Rodrigue - RC.App
 Author URI: https://www.rodrigue-calimia.fr
 Template: Blankslate 
 Version: 1.0.0
 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Syne:wght@400;700;800&display=swap');
 :root{
     --primary-child-theme-color: #DC9F96; /* var(--primary-child-theme-color) */
-    --secondary-child-theme-color: #E5E5E5; /* var(--secondary-child-theme-color) */
+    --secondary-child-theme-color: #ECE2DA; /* var(--secondary-child-theme-color) */
     --hover-child-theme-color: #C02E44; /* var(--hover-child-theme-color) */
     --green-child-theme-color: #326238; /* var(--green-child-theme-color) */
     --light-child-theme-color: #FFFFFF; /* var(--light-child-theme-color) */
-    --font-family-primary: 'Raleway', sans-serif; /* var(--font-family-primary) */
+    --black-child-theme-color: #000000; /* var(--black-child-theme-color) */
+    --font-family-primary: 'Syne', sans-serif; /* var(--font-family-primary) */
     --font-style: normal; /* var(--font-style) */
     --font-weight-400: 400; /* var(--font-weight-400) */
+    --font-weight-800: 800; /* var(--font-weight-800) */
+    --font-weight-700: 700; /* var(--font-weight-700) */
+    --font-size-16: 16px; /* var(--font-size-16) */
+    --font-size-38: 38px; /* var(--font-size-38) */
+    --font-size-30: 30px; /* var(--font-size-30) */
+    --font-size-20: 20px; /* var(--font-size-20) */
+    --line-height-19: 19.2px; /* var(--line-height-19) */
+    --line-height-45: 45.6px; /* var(--line-height-45) */
+    --line-height-36: 36px; /* var(--line-height-36) */
+    --line-height-24: 24px; /* var(--line-height-24) */
+    --width-content: 1440px; /* var(--width-content) */
+}
+*{
+    margin: 0;
+    font-family: var(--font-family-primary);
+    font-style: var(--font-style);
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-20);
+    line-height: var(--line-height-24);
+    color: var(--black-child-theme-color);
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container{
+    width: var(--width-content);
+    margin: auto;
 }
 .nav-item{
     list-style-type: none;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--black-child-theme-color);
 }
 /*HEADER*/
 .barre_logo_menu{
     display: flex;
     align-items: center; /* centre verticalement les blocs avec la fonction display flex*/
-    justify-content: space-around;
+    justify-content: space-between;
     height: 80px;
 }
 .barre_logo_menu li{
@@ -35,6 +69,14 @@ Version: 1.0.0
     background-color: var(--primary-child-theme-color);
     padding: 0px 10%;
 }
+
+.barre_logo_menu li:last-child .nav-link{
+    color: var(--light-child-theme-color);
+}
+.custom-logo{
+    width: 201px;
+    height: 19px;
+}
 #menu-principal{
     display: flex;
     justify-content: space-between;
@@ -44,9 +86,8 @@ Version: 1.0.0
     align-items: center;
 }
 /*BODY*/
-.title_h2_home{
-    width: 781px;
-    height: 92px;
+main{
+    background-color: var(--secondary-child-theme-color);
 }
 /*FOOTER*/
 footer{
