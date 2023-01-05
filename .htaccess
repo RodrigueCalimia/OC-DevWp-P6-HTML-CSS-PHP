@@ -1,0 +1,16 @@
+
+# BEGIN WordPress
+# Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
+# dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.
+# Toute modification des directives situées entre ces marqueurs sera surchargée.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /OpenClassrooms/Parcours/D%C3%A9veloppeur%20WordPress/P6-HTML-CSS-PHP/OC-DevWp-P6-HTML-CSS-PHP/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /OpenClassrooms/Parcours/D%C3%A9veloppeur%20WordPress/P6-HTML-CSS-PHP/OC-DevWp-P6-HTML-CSS-PHP/index.php [L]
+</IfModule>
+
+# END WordPress
