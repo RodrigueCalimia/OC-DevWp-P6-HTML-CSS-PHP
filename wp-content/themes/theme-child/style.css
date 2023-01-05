@@ -1,0 +1,59 @@
+/*
+Theme Name: Astra-Child
+Description: Theme enfant de Rodrigue CALIMA
+Author: Rodrigue - RC.App
+Author URI: https://www.rodrigue-calimia.fr
+Template: Blankslate 
+Version: 1.0.0
+*/
+:root{
+    --primary-child-theme-color: #DC9F96; /* var(--primary-child-theme-color) */
+    --secondary-child-theme-color: #E5E5E5; /* var(--secondary-child-theme-color) */
+    --hover-child-theme-color: #C02E44; /* var(--hover-child-theme-color) */
+    --green-child-theme-color: #326238; /* var(--green-child-theme-color) */
+    --light-child-theme-color: #FFFFFF; /* var(--light-child-theme-color) */
+    --font-family-primary: 'Raleway', sans-serif; /* var(--font-family-primary) */
+    --font-style: normal; /* var(--font-style) */
+    --font-weight-400: 400; /* var(--font-weight-400) */
+}
+.nav-item{
+    list-style-type: none;
+}
+/*HEADER*/
+.barre_logo_menu{
+    display: flex;
+    align-items: center; /* centre verticalement les blocs avec la fonction display flex*/
+    justify-content: space-around;
+    height: 80px;
+}
+.barre_logo_menu li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.barre_logo_menu li:last-child{
+    background-color: var(--primary-child-theme-color);
+    padding: 0px 10%;
+}
+#menu-principal{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 35%;
+    height: 100%;
+    align-items: center;
+}
+/*BODY*/
+.title_h2_home{
+    width: 781px;
+    height: 92px;
+}
+/*FOOTER*/
+footer{
+    height: 60px;
+}
+#pied-de-page{
+    margin: 0;
+    text-align: center;
+    padding-top: 20px;
+}
